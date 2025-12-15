@@ -1,5 +1,4 @@
 const productsGrid = document.getElementById("productsGrid");
-const productsCount = document.getElementById("productsCount");
 const productsSection = document.getElementById("productsSection");
 const productsLink = document.getElementById("productsLink");
 
@@ -282,8 +281,6 @@ function showProducts() {
 
     productsGrid.appendChild(card);
   });
-
-  productsCount.textContent = `${products.length} products found`;
 }
 
 productsLink.addEventListener("click", (e) => {

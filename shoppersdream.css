@@ -28,13 +28,13 @@ body {
   align-items: center;
   gap: 8px;
   font-weight: 500;
-  color: #111;
+  color: black;
 }
 
 .logo-icon {
   width: 20px;
   height: 20px;
-  fill: #111;
+  fill: black;
 }
 
 .nav {
@@ -90,7 +90,7 @@ body {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 

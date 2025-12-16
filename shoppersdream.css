@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 16px 24px;
   display: flex;
@@ -118,10 +118,20 @@ body {
 }
 
 .product-price {
-  color: blue;
-  font-weight: 600;
+  font-weight: 500;
+  color: rgba(29, 14, 72, 0.752);
 }
 
 .hidden {
   display: none;
+}
+
+.nav-bar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  background-color: black;
 }

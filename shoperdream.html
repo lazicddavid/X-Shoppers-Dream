@@ -48,7 +48,7 @@
      
       <div class="products-layout">
   <aside id="filtersAside" class="filters-aside hidden">
-    <input type="text" placeholder="Search" />
+    <input id="Search" type="text" placeholder="Search" />
           <h4>Category</h4>
           <ul id="categoryList">
             <li data-category="all">All</li>
@@ -59,11 +59,9 @@
             <li data-category="Dining">Dining</li>
             <li data-category="Kids">Kids</li>
           </ul>
-        </aside>
 
 
-
-<div class="filter-group">
+          <div class="filter-group">
   <h4>Company</h4>
   <select class="company-select">
     <option value="all">All</option>
@@ -73,6 +71,38 @@
     <option value="caressa">Caressa</option>
   </select>
 </div>
+
+<div class="filter-group">
+  <h4>Price</h4>
+
+  <span class="price-value">$3,099.99</span>
+
+  <input
+    type="range"
+    min="0"
+    max="3100"
+    value="3100"
+    class="price-range"
+  />
+</div>
+
+<div class="filter-group checkbox-group">
+  <label>
+    <input type="checkbox" class="free-shipping-checkbox"/>
+    Free Shipping
+  </label>
+</div>
+
+<button class="clear-filters-btn">Clear filters</button>
+
+
+
+
+        </aside>
+
+
+
+
 
 
 

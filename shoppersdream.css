@@ -6,11 +6,14 @@
 }
 
 body {
+  margin: 0 auto;
+  align-items: center;
+
+  max-width: 1000px
   background: #fff;
 }
 
 .header {
-  border-bottom: 1px solid white;
 }
 
 .container {
@@ -149,7 +152,7 @@ body {
 }
 
 .filters-aside ul {
-  color: blueviolet;
+  color: gray;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -159,10 +162,6 @@ body {
   margin-bottom: 8px;
   cursor: pointer;
   font-size: 14px;
-}
-
-.filters-aside li:hover {
-  text-decoration: underline;
 }
 
 .filter-group {
@@ -183,4 +182,49 @@ body {
   border-radius: 4px;
   background-color: #fff;
   cursor: pointer;
+}
+
+.price-value {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgb(150, 135, 235);
+  font-weight: 500;
+}
+
+.price-range {
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkbox-group {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.checkbox-group input {
+  margin-right: 6px;
+}
+
+.clear-filters-btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #e11d48;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear-filters-btn:hover {
+  opacity: 0.9;
+}
+
+#Search {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid blueviolet;
 }

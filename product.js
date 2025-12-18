@@ -2,7 +2,7 @@ export const products = [
   {
     id: "recZkNf2kwmdBcqd0",
     name: "accent chair",
-    price: 25999,
+    price: 259.99,
     image: "https://www.course-api.com/images/store/product-1.jpeg",
     colors: ["#ff0000", "#00ff00", "#0000ff"],
     company: "marcos",
@@ -14,7 +14,7 @@ export const products = [
   {
     id: "recEHmzvupvT8ZONH",
     name: "albany sectional",
-    price: 109999,
+    price: 1099.99,
     image: "https://www.course-api.com/images/store/product-2.jpeg",
     colors: ["#000", "#ffb900"],
     company: "liddy",
@@ -25,7 +25,7 @@ export const products = [
   {
     id: "rec5NBwZ5zCD9nfF0",
     name: "albany table",
-    price: 309999,
+    price: 3099.99,
     image: "https://www.course-api.com/images/store/product-3.jpeg",
     colors: ["#ffb900", "#0000ff"],
     company: "liddy",
@@ -36,7 +36,7 @@ export const products = [
   {
     id: "recd1jIVIEChmiwhe",
     name: "armchair",
-    price: 12599,
+    price: 125.99,
     image: "https://www.course-api.com/images/store/product-4.jpeg",
     colors: ["#000", "#00ff00", "#0000ff"],
     company: "marcos",
@@ -48,7 +48,7 @@ export const products = [
   {
     id: "recotY5Nh00DQFdkm",
     name: "dining table",
-    price: 42999,
+    price: 429.99,
     image: "https://www.course-api.com/images/store/product-5.jpeg",
     colors: ["#00ff00", "#0000ff", "#ff0000"],
     company: "ikea",
@@ -60,7 +60,7 @@ export const products = [
   {
     id: "rec1Ntk7siEEW9ha1",
     name: "emperor bed",
-    price: 23999,
+    price: 239.99,
     image: "https://www.course-api.com/images/store/product-6.jpeg",
     colors: ["#0000ff", "#000"],
     company: "ikea",
@@ -72,7 +72,7 @@ export const products = [
   {
     id: "recNZ0koOqEmilmoz",
     name: "entertainment center",
-    price: 59999,
+    price: 599.99,
     image: "https://www.course-api.com/images/store/product-7.jpeg",
     featured: true,
     colors: ["#000", "#ff0000"],
@@ -85,7 +85,7 @@ export const products = [
   {
     id: "recrfxv3EwpvJwvjq",
     name: "high-back bench",
-    price: 39999,
+    price: 399.99,
     image: "https://www.course-api.com/images/store/product-8.jpeg",
     featured: true,
     colors: ["#000", "#00ff00"],
@@ -98,7 +98,7 @@ export const products = [
   {
     id: "recoW8ecgjtKx2Sj2",
     name: "leather chair",
-    price: 20099,
+    price: 200.99,
     image: "https://www.course-api.com/images/store/product-9.jpeg",
     colors: ["#ff0000", "#ffb900", "#00ff00"],
     company: "caressa",
@@ -109,7 +109,7 @@ export const products = [
   {
     id: "recEOA6qtDag1hRbU",
     name: "leather sofa",
-    price: 99999,
+    price: 999.99,
     image: "https://www.course-api.com/images/store/product-10.jpeg",
     colors: ["#00ff00", "#0000ff"],
     company: "caressa",
@@ -120,7 +120,7 @@ export const products = [
   {
     id: "recoAJYUCuEKxcPSr",
     name: "modern bookshelf",
-    price: 31999,
+    price: 319.99,
     image: "https://www.course-api.com/images/store/product-11.jpeg",
     featured: true,
     colors: ["#ffb900", "#ff0000", "#00ff00"],
@@ -144,7 +144,7 @@ export const products = [
   {
     id: "rec7CjDWKRgNQtrKe",
     name: "shelf",
-    price: 30999,
+    price: 309.99,
     image: "https://www.course-api.com/images/store/product-13.jpeg",
     colors: ["#00ff00"],
     company: "ikea",
@@ -155,7 +155,7 @@ export const products = [
   {
     id: "recF0KpwlkF7e8kXO",
     name: "simple chair",
-    price: 109999,
+    price: 1099.99,
     image: "https://www.course-api.com/images/store/product-14.jpeg",
     colors: ["#0000ff"],
     company: "liddy",
@@ -167,7 +167,7 @@ export const products = [
   {
     id: "recs5BSVU3qQrOj4E",
     name: "sofa set",
-    price: 129999,
+    price: 1299.99,
     image: "https://www.course-api.com/images/store/product-15.jpeg",
     colors: ["#00ff00", "#ffb900"],
     company: "marcos",
@@ -179,7 +179,7 @@ export const products = [
   {
     id: "recroK1VD8qVdMP5H",
     name: "suede armchair",
-    price: 15999,
+    price: 159.99,
     image: "https://www.course-api.com/images/store/product-16.jpeg",
     colors: ["#ffb900"],
     company: "caressa",
@@ -190,7 +190,7 @@ export const products = [
   {
     id: "rec7JInsuCEHgmaGe",
     name: "utopia sofa",
-    price: 79999,
+    price: 799.99,
     image: "https://www.course-api.com/images/store/product-17.jpeg",
     featured: true,
     colors: ["#ff0000", "#00ff00"],
@@ -202,7 +202,7 @@ export const products = [
   {
     id: "rec3jeKnhInKHJuz2",
     name: "vase table",
-    price: 120999,
+    price: 1209.99,
     image: "https://www.course-api.com/images/store/product-18.jpeg",
     featured: true,
     colors: ["#ff0000"],
@@ -214,7 +214,7 @@ export const products = [
   {
     id: "recv2ohxljlK2FZO7",
     name: "wooden bed",
-    price: 250099,
+    price: 2500.99,
     image: "https://www.course-api.com/images/store/product-19.jpeg",
     colors: ["#000", "#ffb900"],
     company: "ikea",
@@ -225,7 +225,7 @@ export const products = [
   {
     id: "recJIjREF3dlFi3sR",
     name: "wooden desk",
-    price: 150999,
+    price: 1509.99,
     image: "https://www.course-api.com/images/store/product-20.jpeg",
     colors: ["#000"],
     company: "ikea",
@@ -237,7 +237,7 @@ export const products = [
   {
     id: "recm7wC8TBVdU9oEL",
     name: "wooden desk",
-    price: 40099,
+    price: 400.99,
     image: "https://www.course-api.com/images/store/product-21.jpeg",
     colors: ["#0000ff", "#00ff00"],
     company: "ikea",
@@ -248,7 +248,7 @@ export const products = [
   {
     id: "rectfNsySwAJeWDN2",
     name: "wooden table",
-    price: 234999,
+    price: 2349.99,
     image: "https://www.course-api.com/images/store/product-22.jpeg",
     featured: true,
     colors: ["#ffb900", "#ff0000"],

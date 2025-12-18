@@ -45,9 +45,10 @@
           <span id="productsCount"></span>
         </div>
 
-        <aside id="filtersAside" class="hidden">
-          <input type="text" placeholder="Search" />
-
+     
+      <div class="products-layout">
+  <aside id="filtersAside" class="filters-aside hidden">
+    <input type="text" placeholder="Search" />
           <h4>Category</h4>
           <ul id="categoryList">
             <li data-category="all">All</li>
@@ -59,6 +60,22 @@
             <li data-category="Kids">Kids</li>
           </ul>
         </aside>
+
+
+
+<div class="filter-group">
+  <h4>Company</h4>
+  <select class="company-select">
+    <option value="all">All</option>
+    <option value="ikea">Ikea</option>
+    <option value="marcos">Marcos</option>
+    <option value="liddy">Liddy</option>
+    <option value="caressa">Caressa</option>
+  </select>
+</div>
+
+
+
 
         <div id="productsGrid" class="products-grid"></div>
       </section>

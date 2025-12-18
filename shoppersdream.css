@@ -126,6 +126,7 @@ body {
 .hidden {
   display: none;
 }
+
 .nav-bar {
   background-color: black;
   display: flex;
@@ -140,7 +141,6 @@ body {
 
 .filters-aside {
   width: 220px;
-  flex-shrink: 0;
 }
 
 .filters-aside h4 {
@@ -149,6 +149,7 @@ body {
 }
 
 .filters-aside ul {
+  color: blueviolet;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -162,4 +163,24 @@ body {
 
 .filters-aside li:hover {
   text-decoration: underline;
+}
+
+.filter-group {
+  margin-top: 24px;
+}
+
+.filter-group h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.company-select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1.5px solid rgb(150, 135, 235);
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
 }

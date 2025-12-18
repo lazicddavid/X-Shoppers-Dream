@@ -10,12 +10,12 @@ const categoryList = document.getElementById("categoryList");
 function showProducts(productsArray) {
   productsGrid.innerHTML = "";
 
-  products.forEach((product) => {
+  productsArray.forEach((product) => {
     const card = document.createElement("div");
     card.className = "product-card";
 
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" />
+      <img src="${product.image}" />
       <div class="product-info">
         <span class="product-name">${product.name}</span>
         <span class="product-price">$${product.price}</span>
@@ -31,7 +31,7 @@ productsLink.addEventListener("click", (e) => {
   productsSection.classList.remove("hidden");
   filtersAside.classList.remove("hidden");
 
-  showProducts();
+  showProducts(products);
 });
 
 categoryList.addEventListener("click", (e) => {
@@ -52,3 +52,4 @@ categoryList.addEventListener("click", (e) => {
 });
 
 //how to get unique values from an array
+//get funkcije

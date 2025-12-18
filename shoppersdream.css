@@ -125,13 +125,21 @@ body {
 .hidden {
   display: none;
 }
-
 .nav-bar {
   background-color: black;
   display: flex;
   flex-direction: row;
 }
 
-.active {
-  hover: black;
+.products-layout {
+  display: flex;
+  gap: 40px;
+}
+
+.filters-aside {
+  width: 220px;
+}
+
+.products-grid {
+  flex: 1;
 }

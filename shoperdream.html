@@ -40,20 +40,22 @@
     </header>
 
     <main>
-      <section id="productsSection" class="products-page hidden">
-        <div class="products-header">
-          <span id="productsCount"></span>
-        </div>
+ <section id="productsSection" class="products-page hidden">
+  <div class="products-header">
+    <span id="productsCount"></span>
+  </div>
+
 
      
-      <div class="products-layout">
-  <aside id="filtersAside" class="filters-aside hidden">
-    <input id="Search" type="text" placeholder="Search" />
+  <div class="products-layout">
+    <aside id="filtersAside" class="filters-aside hidden">
+    <input id="searchInput" type="text" placeholder="Search" />
           <h4>Category</h4>
           <ul id="categoryList">
             <li data-category="all">All</li>
-            <li data-category="Office">Office</li>
-            <li data-category="Living Room">Living Room</li>
+         <li data-category="office">Office</li>
+<li data-category="living-room">Living Room</li>
+
             <li data-category="Kitchen">Kitchen</li>
             <li data-category="Bedroom">Bedroom</li>
             <li data-category="Dining">Dining</li>
@@ -94,20 +96,8 @@
 </div>
 
 <button class="clear-filters-btn">Clear filters</button>
-
-
-
-
         </aside>
-
-
-
-
-
-
-
-
-        <div id="productsGrid" class="products-grid"></div>
+        <div id="productsGrid"  class="products-grid"></div>
       </section>
     </main>
 

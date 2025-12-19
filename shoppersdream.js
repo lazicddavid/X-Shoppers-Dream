@@ -11,6 +11,40 @@ const priceValue = document.querySelector(".price-value");
 const freeShippingCheckbox = document.querySelector(".free-shipping-checkbox");
 const companySelect = document.querySelector(".company-select");
 const clearAllButton = document.querySelector(".clear-filters-btn");
+const searchInput = document.getElementById("searchInput");
+
+let searchValue = "";
+let selectedCompany = "all";
+let freeShipping = false;
+let maxPrice = Number(priceRange.max);
+
+function filterProducts() {
+  let filteredProducts = [...products];
+
+  if (selectedCompany !== "all") {
+    filteredProducts = filteredProducts.filter(
+      (product) => product.company === selectedCompany
+    );
+  }
+
+  if (freeShipping) {
+    filteredProducts = filteredProducts.filter(
+      (product) => product.shipping === true
+    );
+  }
+
+  filteredProducts = filteredProducts.filter(
+    (product) => product.price <= priceValue
+  );
+
+  if (searchValue !== "") {
+    filteredProducts = filteredProducts.filter((product) =>
+      product.name.toLowerCase().includes(searchValue)
+    );
+  }
+
+  showProducts(filteredProducts);
+}
 
 function showProducts(productsArray) {
   productsGrid.innerHTML = "";
@@ -59,10 +93,8 @@ categoryList.addEventListener("click", (e) => {
 priceRange.addEventListener("input", () => {
   const maxPrice = Number(priceRange.value);
 
-  // update UI (tekst iznad slidera)
   priceValue.textContent = `$${maxPrice.toFixed(2)}`;
 
-  // filtriranje proizvoda po ceni
   const filteredByPrice = products.filter(
     (product) => product.price <= maxPrice
   );
@@ -95,12 +127,20 @@ companySelect.addEventListener("change", () => {
 });
 
 clearAllButton.addEventListener("click", () => {
-  companySelect.value = "all";
+  selectedCompany = "all";
+  freeShipping = false;
+  searchValue = "";
 
+  companySelect.value = "all";
   freeShippingCheckbox.checked = false;
+  searchInput.value = "";
 
   priceRange.value = priceRange.max;
-  showProducts(products);
+  maxPrice = Number(priceRange.max);
+  priceValue.textContent = `$${maxPrice.toFixed(2)}`;
+
+  filterProducts();
 });
+
 //how to get unique values from an array
 //get funkcije

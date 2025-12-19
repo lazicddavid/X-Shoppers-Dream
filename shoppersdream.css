@@ -223,7 +223,7 @@ body {
   opacity: 0.9;
 }
 
-#Search {
+#searchInput {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid blueviolet;

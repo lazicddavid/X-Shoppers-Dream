@@ -1,4 +1,4 @@
-import { products } from "./product.js";
+/*import { products } from "./product.js";
 
 const productsGrid = document.getElementById("productsGrid");
 const productsSection = document.getElementById("productsSection");
@@ -144,3 +144,4 @@ clearAllButton.addEventListener("click", () => {
 
 //how to get unique values from an array
 //get funkcije
+*/

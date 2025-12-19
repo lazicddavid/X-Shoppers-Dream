@@ -13,7 +13,6 @@ const DOM = {
   companySelect: document.querySelector(".company-select"),
   clearAllButton: document.querySelector(".clear-filters-btn"),
   searchInput: document.getElementById("searchInput"),
-  productsCount: document.getElementById("productsCount"),
 };
 
 const state = {
@@ -52,7 +51,7 @@ const productManager = {
   },
 };
 
-function renderProducts() {
+function showProducts() {
   const filteredProducts = productManager.getFilteredProducts();
 
   DOM.productsGrid.innerHTML = "";
@@ -62,7 +61,7 @@ function renderProducts() {
     card.className = "product-card";
 
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" />
+      <img src="${product.image}" />
       <div class="product-info">
         <span class="product-name">${product.name}</span>
         <span class="product-price">$${product.price}</span>
@@ -71,45 +70,41 @@ function renderProducts() {
 
     DOM.productsGrid.appendChild(card);
   });
-
-  if (DOM.productsCount) {
-    DOM.productsCount.textContent = `${filteredProducts.length} products found`;
-  }
 }
 
 DOM.productsLink.addEventListener("click", (e) => {
   e.preventDefault();
   DOM.productsSection.classList.remove("hidden");
   DOM.filtersAside.classList.remove("hidden");
-  renderProducts();
+  showProducts();
 });
 
 DOM.categoryList.addEventListener("click", (e) => {
   if (e.target.tagName !== "LI") return;
 
   state.category = e.target.dataset.category;
-  renderProducts();
+  showProducts();
 });
 
 DOM.companySelect.addEventListener("change", (e) => {
   state.company = e.target.value;
-  renderProducts();
+  showProducts();
 });
 
 DOM.priceRange.addEventListener("input", (e) => {
   state.maxPrice = Number(e.target.value);
   DOM.priceValue.textContent = `$${state.maxPrice.toFixed(2)}`;
-  renderProducts();
+  showProducts();
 });
 
 DOM.freeShippingCheckbox.addEventListener("change", (e) => {
   state.freeShipping = e.target.checked;
-  renderProducts();
+  showProducts();
 });
 
 DOM.searchInput.addEventListener("input", (e) => {
   state.search = e.target.value.toLowerCase();
-  renderProducts();
+  showProducts();
 });
 
 DOM.clearAllButton.addEventListener("click", () => {
@@ -125,5 +120,5 @@ DOM.clearAllButton.addEventListener("click", () => {
   DOM.priceRange.value = DOM.priceRange.max;
   DOM.priceValue.textContent = `$${state.maxPrice.toFixed(2)}`;
 
-  renderProducts();
+  showProducts();
 });

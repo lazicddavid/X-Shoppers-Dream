@@ -141,7 +141,7 @@ clearAllButton.addEventListener("click", () => {
 
   filterProducts();
 });
+*/
 
 //how to get unique values from an array
 //get funkcije
-*/

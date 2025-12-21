@@ -223,10 +223,6 @@ body {
   opacity: 0.9;
 }
 
-.clear-filters-btn:hover {
-  opacity: 0.9;
-}
-
 #searchInput {
   padding: 10px;
   border-radius: 6px;

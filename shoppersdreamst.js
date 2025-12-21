@@ -122,3 +122,9 @@ DOM.clearAllButton.addEventListener("click", () => {
 
   showProducts();
 });
+
+const items = [];
+
+if (!items.length) {
+  console.log("Nema ništa");
+}

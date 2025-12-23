@@ -50,7 +50,7 @@ const productManager = {
     return result;
   },
 };
-function setupCategories() {
+function setCategories() {
   const categories = ["all"];
 
   products.forEach((product) => {
@@ -104,6 +104,8 @@ DOM.productsLink.addEventListener("click", (e) => {
   e.preventDefault();
   DOM.productsSection.classList.remove("hidden");
   DOM.filtersAside.classList.remove("hidden");
+
+  setCategories();
   showProducts();
 });
 

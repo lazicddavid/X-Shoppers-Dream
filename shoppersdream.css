@@ -228,3 +228,7 @@ body {
   border-radius: 6px;
   border: 1px solid blueviolet;
 }
+
+#categoryList li {
+  text-transform: uppercase;
+}

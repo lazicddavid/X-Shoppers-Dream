@@ -5,7 +5,6 @@ const DOM = {
   productsSection: document.getElementById("productsSection"),
   productsLink: document.getElementById("productsLink"),
   filtersAside: document.getElementById("filtersAside"),
-
   categoryList: document.getElementById("categoryList"),
   priceRange: document.querySelector(".price-range"),
   priceValue: document.querySelector(".price-value"),
@@ -106,10 +105,7 @@ function setCompanies() {
 
     if (company === "all") {
       option.textContent = "All";
-    } else {
-      option.textContent = company.charAt(0).toUpperCase() + company.slice(1);
     }
-
     DOM.companySelect.appendChild(option);
   });
 }

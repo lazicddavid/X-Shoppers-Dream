@@ -36,7 +36,7 @@ const productManager = {
     }
 
     if (state.freeShipping) {
-      result = result.filter((product) => product.freeShipping === true);
+      result = result.filter((product) => product.shipping === true);
     }
 
     result = result.filter((product) => product.price <= state.maxPrice);
@@ -164,7 +164,7 @@ DOM.priceRange.addEventListener("input", (e) => {
 });
 
 DOM.freeShippingCheckbox.addEventListener("change", (e) => {
-  state.freeShipping = e.target.checked;
+  state.Shipping = e.target.checked;
   showProducts();
 });
 
@@ -177,7 +177,7 @@ DOM.clearAllButton.addEventListener("click", () => {
   state.search = "";
   state.category = "all";
   state.company = "all";
-  state.freeShipping = false;
+  state.Shipping = false;
   state.maxPrice = Number(DOM.priceRange.max);
 
   DOM.searchInput.value = "";

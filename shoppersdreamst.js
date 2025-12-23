@@ -55,7 +55,9 @@ function setCategories() {
 
   products.forEach((product) => {
     let exists = false;
-
+    //napravi prazan array, u category array, gurni od svakog proizvoda kategorije
+    //onda pogledaj sta je Set i kako od array-a da napravis novi array od Set-a
+    //razdvoji ovu funkciju na dve manje: jedna se zove getUniqueCategories, a druga displayCategories
     for (let i = 0; i < categories.length; i++) {
       if (categories[i] === product.category) {
         exists = true;
@@ -103,6 +105,7 @@ function setCompanies() {
     const option = document.createElement("option");
     option.value = company;
 
+    option.textContent = company;
     if (company === "all") {
       option.textContent = "All";
     }
@@ -130,6 +133,9 @@ function showProducts() {
     DOM.productsGrid.appendChild(card);
   });
 }
+
+//kad kliknem na kategoriju da se ispod ne pojavi crta, ispod kategorije na koju sam kliknuo
+//
 
 DOM.productsLink.addEventListener("click", (e) => {
   e.preventDefault();

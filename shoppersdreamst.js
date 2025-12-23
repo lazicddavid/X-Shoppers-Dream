@@ -50,6 +50,7 @@ const productManager = {
     return result;
   },
 };
+
 function setCategories() {
   const categories = ["all"];
 
@@ -76,6 +77,40 @@ function setCategories() {
     li.dataset.category = category;
 
     DOM.categoryList.appendChild(li);
+  });
+}
+
+function setCompanies() {
+  const companies = ["all"];
+
+  products.forEach((product) => {
+    let exists = false;
+
+    for (let i = 0; i < companies.length; i++) {
+      if (companies[i] === product.company) {
+        exists = true;
+        break;
+      }
+    }
+
+    if (!exists) {
+      companies.push(product.company);
+    }
+  });
+
+  DOM.companySelect.innerHTML = "";
+
+  companies.forEach((company) => {
+    const option = document.createElement("option");
+    option.value = company;
+
+    if (company === "all") {
+      option.textContent = "All";
+    } else {
+      option.textContent = company.charAt(0).toUpperCase() + company.slice(1);
+    }
+
+    DOM.companySelect.appendChild(option);
   });
 }
 
@@ -106,6 +141,7 @@ DOM.productsLink.addEventListener("click", (e) => {
   DOM.filtersAside.classList.remove("hidden");
 
   setCategories();
+  setCompanies();
   showProducts();
 });
 

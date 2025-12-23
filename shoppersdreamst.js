@@ -50,6 +50,34 @@ const productManager = {
     return result;
   },
 };
+function setupCategories() {
+  const categories = ["all"];
+
+  products.forEach((product) => {
+    let exists = false;
+
+    for (let i = 0; i < categories.length; i++) {
+      if (categories[i] === product.category) {
+        exists = true;
+        break;
+      }
+    }
+
+    if (!exists) {
+      categories.push(product.category);
+    }
+  });
+
+  DOM.categoryList.innerHTML = "";
+
+  categories.forEach((category) => {
+    const li = document.createElement("li");
+    li.textContent = category;
+    li.dataset.category = category;
+
+    DOM.categoryList.appendChild(li);
+  });
+}
 
 function showProducts() {
   const filteredProducts = productManager.getFilteredProducts();

@@ -164,7 +164,7 @@ DOM.priceRange.addEventListener("input", (e) => {
 });
 
 DOM.freeShippingCheckbox.addEventListener("change", (e) => {
-  state.Shipping = e.target.checked;
+  state.freeShipping = e.target.checked;
   showProducts();
 });
 
@@ -177,7 +177,7 @@ DOM.clearAllButton.addEventListener("click", () => {
   state.search = "";
   state.category = "all";
   state.company = "all";
-  state.Shipping = false;
+  state.freeShipping = false;
   state.maxPrice = Number(DOM.priceRange.max);
 
   DOM.searchInput.value = "";

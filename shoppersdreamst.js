@@ -53,6 +53,14 @@ const productManager = {
 function setCategories() {
   const categories = ["all"];
 
+
+
+const setCategories = new Set()
+
+
+
+
+/*
   products.forEach((product) => {
     let exists = false;
     //napravi prazan array, u category array, gurni od svakog proizvoda kategorije
@@ -80,6 +88,8 @@ function setCategories() {
     DOM.categoryList.appendChild(li);
   });
 }
+
+*/
 
 function setCompanies() {
   const companies = ["all"];

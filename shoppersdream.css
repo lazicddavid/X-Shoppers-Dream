@@ -231,12 +231,6 @@ body {
   border: 1px solid blueviolet;
 }
 
-#searchInput {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid blueviolet;
-}
-
 #categoryList li {
   text-transform: uppercase;
 }

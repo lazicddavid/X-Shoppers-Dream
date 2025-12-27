@@ -50,46 +50,15 @@ const productManager = {
   },
 };
 
-function setCategories() {
-  const categories = ["all"];
+function getCategories() {
+  const categorySet = new Set();
 
-
-
-const setCategories = new Set()
-
-
-
-
-/*
   products.forEach((product) => {
-    let exists = false;
-    //napravi prazan array, u category array, gurni od svakog proizvoda kategorije
-    //onda pogledaj sta je Set i kako od array-a da napravis novi array od Set-a
-    //razdvoji ovu funkciju na dve manje: jedna se zove getUniqueCategories, a druga displayCategories
-    for (let i = 0; i < categories.length; i++) {
-      if (categories[i] === product.category) {
-        exists = true;
-        break;
-      }
-    }
-
-    if (!exists) {
-      categories.push(product.category);
-    }
+    categorySet.add(product.category);
   });
 
-  DOM.categoryList.innerHTML = "";
-
-  categories.forEach((category) => {
-    const li = document.createElement("li");
-    li.textContent = category;
-    li.dataset.category = category;
-
-    DOM.categoryList.appendChild(li);
-  });
+  return ["all", ...categorySet];
 }
-
-*/
 
 function setCompanies() {
   const companies = ["all"];
@@ -123,24 +92,26 @@ function setCompanies() {
   });
 }
 
-function showProducts() {
-  const filteredProducts = productManager.getFilteredProducts();
+function getUniqueCategories() {
+  const categorySet = new Set();
 
-  DOM.productsGrid.innerHTML = "";
+  products.forEach((product) => {
+    categorySet.add(product.category);
+  });
 
-  filteredProducts.forEach((product) => {
-    const card = document.createElement("div");
-    card.className = "product-card";
+  return ["all", ...categorySet];
+}
 
-    card.innerHTML = `
-      <img src="${product.image}" />
-      <div class="product-info">
-        <span class="product-name">${product.name}</span>
-        <span class="product-price">$${product.price}</span>
-      </div>
-    `;
+function displayCategories() {
+  const categories = getUniqueCategories();
+  DOM.categoryList.innerHTML = "";
 
-    DOM.productsGrid.appendChild(card);
+  categories.forEach((category) => {
+    const li = document.createElement("li");
+    li.textContent = category.toUpperCase();
+    li.dataset.category = category;
+
+    DOM.categoryList.appendChild(li);
   });
 }
 

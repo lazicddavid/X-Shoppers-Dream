@@ -98,11 +98,15 @@ function showProducts() {
 
   filteredProducts.forEach((product) => {
     const article = document.createElement("article");
+    article.classList.add("product");
 
     article.innerHTML = `
-      <img src="${product.image}">
-      <h4>${product.name}</h4>
-      <p>$${product.price}</p>`;
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="product-info">
+        <h4>${product.name}</h4>
+        <p>$${product.price}</p>
+      </div>
+    `;
 
     DOM.productsGrid.appendChild(article);
   });

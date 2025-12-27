@@ -78,6 +78,10 @@ function setCompanies() {
     }
   });
 
+  function displayCategories() {
+    const categories = getUniqueCategories();
+  }
+
   DOM.companySelect.innerHTML = "";
 
   companies.forEach((company) => {
@@ -109,14 +113,9 @@ function displayCategories() {
   categories.forEach((category) => {
     const li = document.createElement("li");
     li.textContent = category.toUpperCase();
-    li.dataset.category = category;
-
-    DOM.categoryList.appendChild(li);
+    li.dataset.categor;
   });
 }
-
-//kad kliknem na kategoriju da se ispod ne pojavi crta, ispod kategorije na koju sam kliknuo
-//
 
 DOM.productsLink.addEventListener("click", (e) => {
   e.preventDefault();
@@ -171,3 +170,6 @@ DOM.clearAllButton.addEventListener("click", () => {
 
   showProducts();
 });
+
+//kad kliknem na kategoriju da se ispod ne pojavi crta, ispod kategorije na koju sam kliknuo
+//napravi prazan array, u category array, gurni od svakog proizvoda kategorije //onda pogledaj sta je Set i kako od array-a da napravis novi array od Set-a //razdvoji ovu funkciju na dve manje: jedna se zove getUniqueCategories, a druga displayCategories

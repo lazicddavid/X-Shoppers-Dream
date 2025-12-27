@@ -78,10 +78,6 @@ function setCompanies() {
     }
   });
 
-  function displayCategories() {
-    const categories = getUniqueCategories();
-  }
-
   DOM.companySelect.innerHTML = "";
 
   companies.forEach((company) => {
@@ -96,16 +92,6 @@ function setCompanies() {
   });
 }
 
-function getUniqueCategories() {
-  const categorySet = new Set();
-
-  products.forEach((product) => {
-    categorySet.add(product.category);
-  });
-
-  return ["all", ...categorySet];
-}
-
 function displayCategories() {
   const categories = getUniqueCategories();
   DOM.categoryList.innerHTML = "";
@@ -113,7 +99,9 @@ function displayCategories() {
   categories.forEach((category) => {
     const li = document.createElement("li");
     li.textContent = category.toUpperCase();
-    li.dataset.categor;
+    li.dataset.category = category;
+
+    DOM.categoryList.appendChild(li);
   });
 }
 
@@ -122,7 +110,7 @@ DOM.productsLink.addEventListener("click", (e) => {
   DOM.productsSection.classList.remove("hidden");
   DOM.filtersAside.classList.remove("hidden");
 
-  setCategories();
+  displayCategories();
   setCompanies();
   showProducts();
 });

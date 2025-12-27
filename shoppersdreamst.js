@@ -92,8 +92,24 @@ function setCompanies() {
   });
 }
 
+function showProducts() {
+  const filteredProducts = productManager.getFilteredProducts();
+  DOM.productsGrid.innerHTML = "";
+
+  filteredProducts.forEach((product) => {
+    const article = document.createElement("article");
+
+    article.innerHTML = `
+      <img src="${product.image}">
+      <h4>${product.name}</h4>
+      <p>$${product.price}</p>`;
+
+    DOM.productsGrid.appendChild(article);
+  });
+}
+
 function displayCategories() {
-  const categories = getUniqueCategories();
+  const categories = getCategories();
   DOM.categoryList.innerHTML = "";
 
   categories.forEach((category) => {
@@ -124,6 +140,7 @@ DOM.categoryList.addEventListener("click", (e) => {
 
 DOM.companySelect.addEventListener("change", (e) => {
   state.company = e.target.value;
+
   showProducts();
 });
 

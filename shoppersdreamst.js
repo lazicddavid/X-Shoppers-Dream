@@ -50,14 +50,12 @@ const productManager = {
   },
 };
 
-function getCategories() {
-  const categorySet = new Set();
+function getUniqueCategories() {
+  const categories = [];
 
   products.forEach((product) => {
-    categorySet.add(product.category);
+    categories.push(product.category);
   });
-
-  return ["all", ...categorySet];
 }
 
 function setCompanies() {
@@ -137,6 +135,11 @@ DOM.productsLink.addEventListener("click", (e) => {
 
 DOM.categoryList.addEventListener("click", (e) => {
   if (e.target.tagName !== "LI") return;
+
+  const allCategories = DOM.categoryList.querySelectorAll("li");
+  allCategories.forEach((li) => li.classList.remove("active"));
+
+  e.target.classList.add("active");
 
   state.category = e.target.dataset.category;
   showProducts();

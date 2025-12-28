@@ -244,3 +244,13 @@ body {
   height: 200px;
   object-fit: cover;
 }
+
+#categoryList li {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+#categoryList li.active {
+  border-bottom: 2px solid #000;
+}

@@ -56,6 +56,9 @@ function getUniqueCategories() {
   products.forEach((product) => {
     categories.push(product.category);
   });
+
+  const uniqueCategories = [...new Set(categories)];
+  return ["all", ...uniqueCategories];
 }
 
 function setCompanies() {
@@ -111,7 +114,7 @@ function showProducts() {
 }
 
 function displayCategories() {
-  const categories = getCategories();
+  const categories = getUniqueCategories();
   DOM.categoryList.innerHTML = "";
 
   categories.forEach((category) => {

@@ -1,3 +1,8 @@
+//kad kliknem na kategoriju da se ispod ne pojavi crta, ispod kategorije na koju sam kliknuo
+//napravi prazan array, u category array, gurni od svakog proizvoda kategorije
+//onda pogledaj sta je Set i kako od array-a da napravis novi array od Set-a
+//razdvoji ovu funkciju na dve manje: jedna se zove getUniqueCategories, a druga displayCategories
+
 import { products } from "./product.js";
 
 const DOM = {
@@ -62,33 +67,29 @@ function getUniqueCategories() {
 }
 
 function setCompanies() {
-  const companies = ["all"];
+  const companySet = new Set();
 
   products.forEach((product) => {
-    let exists = false;
-
-    for (let i = 0; i < companies.length; i++) {
-      if (companies[i] === product.company) {
-        exists = true;
-        break;
-      }
-    }
-
-    if (!exists) {
-      companies.push(product.company);
-    }
+    companySet.add(product.company);
   });
+
+  return ["all", ...companySet];
+}
+
+function renderCompanies() {
+  const companies = setCompanies();
 
   DOM.companySelect.innerHTML = "";
 
   companies.forEach((company) => {
     const option = document.createElement("option");
     option.value = company;
-
     option.textContent = company;
+
     if (company === "all") {
       option.textContent = "All";
     }
+
     DOM.companySelect.appendChild(option);
   });
 }
@@ -122,6 +123,10 @@ function displayCategories() {
     li.textContent = category.toUpperCase();
     li.dataset.category = category;
 
+    if (category === "all") {
+      li.classList.add("active");
+    }
+
     DOM.categoryList.appendChild(li);
   });
 }
@@ -132,7 +137,7 @@ DOM.productsLink.addEventListener("click", (e) => {
   DOM.filtersAside.classList.remove("hidden");
 
   displayCategories();
-  setCompanies();
+  renderCompanies();
   showProducts();
 });
 
@@ -185,6 +190,3 @@ DOM.clearAllButton.addEventListener("click", () => {
 
   showProducts();
 });
-
-//kad kliknem na kategoriju da se ispod ne pojavi crta, ispod kategorije na koju sam kliknuo
-//napravi prazan array, u category array, gurni od svakog proizvoda kategorije //onda pogledaj sta je Set i kako od array-a da napravis novi array od Set-a //razdvoji ovu funkciju na dve manje: jedna se zove getUniqueCategories, a druga displayCategories

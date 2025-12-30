@@ -261,3 +261,8 @@ body {
   border-bottom: 2px solid slateblue;
   width: 60%;
 }
+
+#categoryList li.active {
+  border-bottom: 2px solid slateblue;
+  width: 60%;
+}

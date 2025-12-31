@@ -245,6 +245,10 @@ body {
   color: black;
 }
 
+.company-select {
+  color: black;
+}
+
 .products-grid article img {
   width: 100%;
   height: 200px;
@@ -255,11 +259,6 @@ body {
   cursor: pointer;
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
-}
-
-#categoryList li.active {
-  border-bottom: 2px solid slateblue;
-  width: 60%;
 }
 
 #categoryList li.active {

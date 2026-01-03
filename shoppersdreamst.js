@@ -17,6 +17,7 @@ const DOM = {
   companySelect: document.querySelector(".company-select"),
   clearAllButton: document.querySelector(".clear-filters-btn"),
   searchInput: document.getElementById("searchInput"),
+  colorsContainer: document.querySelector(".colors-container"),
 };
 
 const state = {
@@ -93,6 +94,70 @@ function renderCompanies() {
 
     DOM.companySelect.appendChild(option);
   });
+}
+function setColors() {
+  const colors = ["all"];
+
+  products.forEach((product) => {
+    product.colors.forEach((color) => {
+      if (!colors.includes(color)) {
+        colors.push(color);
+      }
+    });
+  });
+
+  return colors;
+}
+
+function renderColors() {
+  const colors = setColors();
+  DOM.colorsContainer.innerHTML = "";
+
+  colors.forEach((color) => {
+    const button = document.createElement("button");
+
+    if (color === "all") {
+      button.textContent = "All";
+      button.classList.add("color-all");
+
+      if (state.color === "all") {
+        button.classList.add("active");
+      }
+    } else {
+      button.classList.add("color-btn");
+      button.style.backgroundColor = color;
+    }
+
+    button.dataset.color = color;
+    DOM.colorsContainer.appendChild(button);
+  });
+}
+
+function resetColors() {
+  state.color = "all";
+
+  const buttons = DOM.colorsContainer.querySelectorAll("button");
+  buttons.forEach((btn) => btn.classList.remove("active"));
+
+  const allBtn = DOM.colorsContainer.querySelector('[data-color="all"]');
+  if (allBtn) allBtn.classList.add("active");
+}
+
+DOM.colorsContainer.addEventListener("click", (e) => {
+  if (!e.target.dataset.color) return;
+
+  state.color = e.target.dataset.color;
+
+  const buttons = DOM.colorsContainer.querySelectorAll("button");
+  buttons.forEach((btn) => btn.classList.remove("active"));
+
+  e.target.classList.add("active");
+
+  showProducts();
+});
+
+if (state.color !== "all") {
+  result = result.filter((product) => product.colors.includes(state.color));
 }
 
 function showProducts() {

@@ -53,6 +53,10 @@ const productManager = {
       );
     }
 
+    if (state.color !== "all") {
+      result = result.filter((product) => product.colors.includes(state.color));
+    }
+
     return result;
   },
 };
@@ -201,7 +205,7 @@ DOM.productsLink.addEventListener("click", (e) => {
   e.preventDefault();
   DOM.productsSection.classList.remove("hidden");
   DOM.filtersAside.classList.remove("hidden");
-
+  renderColors();
   displayCategories();
   renderCompanies();
   showProducts();

@@ -33,6 +33,10 @@ const productManager = {
   getFilteredProducts() {
     let result = [...products];
 
+    if (state.color !== "all") {
+      result = result.filter((product) => product.colors.includes(state.color));
+    }
+
     if (state.category !== "all") {
       result = result.filter((product) => product.category === state.category);
     }
@@ -51,10 +55,6 @@ const productManager = {
       result = result.filter((product) =>
         product.name.toLowerCase().includes(state.search)
       );
-    }
-
-    if (state.color !== "all") {
-      result = result.filter((product) => product.colors.includes(state.color));
     }
 
     return result;
@@ -159,10 +159,6 @@ DOM.colorsContainer.addEventListener("click", (e) => {
 
   showProducts();
 });
-
-if (state.color !== "all") {
-  result = result.filter((product) => product.colors.includes(state.color));
-}
 
 function showProducts() {
   const filteredProducts = productManager.getFilteredProducts();

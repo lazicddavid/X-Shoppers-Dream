@@ -1,8 +1,3 @@
-//kad kliknem na kategoriju da se ispod ne pojavi crta, ispod kategorije na koju sam kliknuo
-//napravi prazan array, u category array, gurni od svakog proizvoda kategorije
-//onda pogledaj sta je Set i kako od array-a da napravis novi array od Set-a
-//razdvoji ovu funkciju na dve manje: jedna se zove getUniqueCategories, a druga displayCategories
-
 import { products } from "./product.js";
 
 const DOM = {

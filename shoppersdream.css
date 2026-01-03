@@ -274,7 +274,6 @@ body {
   cursor: pointer;
 }
 
-/* krugovi */
 .color-btn {
   width: 18px;
   height: 18px;
@@ -282,7 +281,6 @@ body {
   border: none;
 }
 
-/* All tekst */
 .color-all {
   background: none;
   border: none;

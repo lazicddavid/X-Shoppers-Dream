@@ -24,6 +24,7 @@ const state = {
   category: "all",
   company: "all",
   freeShipping: false,
+  color: "all",
   maxPrice: Number(DOM.priceRange.max),
 };
 
@@ -181,12 +182,13 @@ DOM.clearAllButton.addEventListener("click", () => {
   state.company = "all";
   state.freeShipping = false;
   state.maxPrice = Number(DOM.priceRange.max);
-
+  state.color = "all";
   DOM.searchInput.value = "";
   DOM.companySelect.value = "all";
   DOM.freeShippingCheckbox.checked = false;
   DOM.priceRange.value = DOM.priceRange.max;
   DOM.priceValue.textContent = `$${state.maxPrice.toFixed(2)}`;
 
+  resetColors();
   showProducts();
 });

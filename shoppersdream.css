@@ -261,3 +261,31 @@ body {
   border-bottom: 2px solid slateblue;
   width: 60%;
 }
+
+.colors-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-btn,
+.color-all {
+  position: relative;
+  cursor: pointer;
+}
+
+/* krugovi */
+.color-btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+}
+
+/* All tekst */
+.color-all {
+  background: none;
+  border: none;
+  font-size: 14px;
+  padding: 0;
+}

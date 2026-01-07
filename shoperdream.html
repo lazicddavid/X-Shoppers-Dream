@@ -38,25 +38,9 @@
         </div>
       </div>
     </header>
-    <div class="products-header">
-      <p class="products-count">22 products found</p>
-      <div class="line"></div>
-      <div class="sort">
-        <label for="sort">Sort by</label>
-        <select id="sort">
-          <option value="lowest">Price (Lowest)</option>
-          <option value="highest">Price (Highest)</option>
-          <option value="a-z">Name (A-Z)</option>
-          <option value="z-a">Name (Z-A)</option>
-        </select>
-      </div>
-    </div>
+
     <main>
       <section id="productsSection" class="products-page hidden">
-        <div class="products-header">
-          <span id="productsCount"></span>
-        </div>
-
         <div class="products-layout">
           <aside id="filtersAside" class="filters-aside hidden">
             <input id="searchInput" type="text" placeholder="Search" />
@@ -91,7 +75,23 @@
             <button class="clear-filters-btn">Clear filters</button>
           </aside>
 
-          <div id="productsGrid" class="products-grid"></div>
+          <div class="products-content">
+            <div class="products-header">
+              <p id="productsCount" class="products-count">22 products found</p>
+              <div class="line"></div>
+              <div class="sort">
+                <label for="sort">Sort by</label>
+                <select id="sort">
+                  <option value="lowest">Price (Lowest)</option>
+                  <option value="highest">Price (Highest)</option>
+                  <option value="a-z">Name (A-Z)</option>
+                  <option value="z-a">Name (Z-A)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="productsGrid" class="products-grid"></div>
+          </div>
         </div>
       </section>
     </main>

@@ -311,3 +311,9 @@ body {
   height: 1px;
   background: #ccc;
 }
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

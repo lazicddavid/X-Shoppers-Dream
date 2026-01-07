@@ -305,3 +305,9 @@ body {
   font-size: 1rem;
   white-space: nowrap;
 }
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}

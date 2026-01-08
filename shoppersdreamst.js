@@ -264,6 +264,11 @@ DOM.searchInput.addEventListener("input", (e) => {
   showProducts();
 });
 
+DOM.sortSelect.addEventListener("change", (e) => {
+  state.sort = e.target.value;
+  showProducts();
+});
+
 DOM.clearAllButton.addEventListener("click", () => {
   state.search = "";
   state.category = "all";
@@ -271,6 +276,8 @@ DOM.clearAllButton.addEventListener("click", () => {
   state.freeShipping = false;
   state.maxPrice = Number(DOM.priceRange.max);
   state.color = "all";
+  state.sort = "lowest";
+  DOM.sortSelect.value = "lowest";
   DOM.searchInput.value = "";
   DOM.companySelect.value = "all";
   DOM.freeShippingCheckbox.checked = false;

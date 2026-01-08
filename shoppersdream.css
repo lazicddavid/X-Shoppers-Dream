@@ -12,13 +12,6 @@ body {
   background: #fff;
 }
 
-body {
-  margin: 0 auto;
-  align-items: center;
-  max-width: 1000px;
-  background: #fff;
-}
-
 .header {
 }
 
@@ -320,4 +313,18 @@ body {
 
 .sort select {
   padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .products-layout {
+    flex-direction: column;
+  }
+
+  .filters-aside {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }

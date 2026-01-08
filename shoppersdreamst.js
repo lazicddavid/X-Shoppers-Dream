@@ -13,6 +13,8 @@ const DOM = {
   clearAllButton: document.querySelector(".clear-filters-btn"),
   searchInput: document.getElementById("searchInput"),
   colorsContainer: document.querySelector(".colors-container"),
+  sortSelect: document.getElementById("sort"),
+  productsCount: document.getElementById("productsCount"),
 };
 
 const state = {
@@ -22,6 +24,7 @@ const state = {
   freeShipping: false,
   color: "all",
   maxPrice: Number(DOM.priceRange.max),
+  sort: "lowest",
 };
 
 const productManager = {
@@ -50,6 +53,30 @@ const productManager = {
       result = result.filter((product) =>
         product.name.toLowerCase().includes(state.search)
       );
+    }
+
+    if (state.sort === "lowest") {
+      result.sort((a, b) => a.price - b.price);
+    }
+
+    if (state.sort === "highest") {
+      result.sort((a, b) => b.price - a.price);
+    }
+
+    if (state.sort === "a-z") {
+      result.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      });
+    }
+
+    if (state.sort === "z-a") {
+      result.sort((a, b) => {
+        if (a.name > b.name) return -1;
+        if (a.name < b.name) return 1;
+        return 0;
+      });
     }
 
     return result;
@@ -157,6 +184,7 @@ DOM.colorsContainer.addEventListener("click", (e) => {
 
 function showProducts() {
   const filteredProducts = productManager.getFilteredProducts();
+  DOM.productsCount.textContent = `${filteredProducts.length} products found`;
   DOM.productsGrid.innerHTML = "";
 
   filteredProducts.forEach((product) => {

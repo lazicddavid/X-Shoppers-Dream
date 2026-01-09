@@ -12,4 +12,5 @@ const DOM = {
   companySelect: document.querySelector(".company-select"),
   clearAllButton: document.querySelector(".clear-filters-btn"),
   searchInput: document.getElementById("searchInput"),
+  colorsContainer: document.querySelector(".colors-container"),
 };

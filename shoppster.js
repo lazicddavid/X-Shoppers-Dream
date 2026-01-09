@@ -1,4 +1,4 @@
-import { products } from "./product";
+import { products } from "./product.js";
 
 const DOM = {
   productGrid: document.getElementById("productGrid"),

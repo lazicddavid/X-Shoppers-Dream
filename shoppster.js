@@ -24,4 +24,6 @@ DOM.clearAllButton.addEventListener("click", () => {
   DOM.freeShippingCheckbox.checked = false;
   DOM.priceRange.value = DOM.priceRange.max;
   DOM.priceValue.textContent = `$${state.maxPrice.toFixed(2)}`;
+
+  resetColors();
 });

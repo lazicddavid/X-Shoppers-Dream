@@ -16,3 +16,10 @@ const DOM = {
   sortSelect: document.getElementById("sort"),
   productCount: document.getElementById("productsCount"),
 };
+
+DOM.clearAllButton.addEventListener("click", () => {
+  DOM.sortSelect.value = "lowest";
+  DOM.searchInput.value = "";
+  DOM.companySelect.value - all;
+  DOM.freeShippingCheckbox.checked = false;
+});

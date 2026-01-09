@@ -22,5 +22,5 @@ DOM.clearAllButton.addEventListener("click", () => {
   DOM.searchInput.value = "";
   DOM.companySelect.value - all;
   DOM.freeShippingCheckbox.checked = false;
-  DOM.priceRange.value = DOM.priceRang.max;
+  DOM.priceRange.value = DOM.priceRange.max;
 });

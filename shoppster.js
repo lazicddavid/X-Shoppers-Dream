@@ -9,4 +9,5 @@ const DOM = {
   priceRange: document.querySelector(".price-range"),
   priceValue: document.querySelector(".price-value"),
   freeShippingCheckbox: document.querySelector(".free-shipping-checkbox"),
+  companySelect: document.querySelector(".company-select"),
 };

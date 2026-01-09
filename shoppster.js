@@ -14,4 +14,5 @@ const DOM = {
   searchInput: document.getElementById("searchInput"),
   colorsContainer: document.querySelector(".colors-container"),
   sortSelect: document.getElementById("sort"),
+  productCount: document.getElementById("productsCount"),
 };

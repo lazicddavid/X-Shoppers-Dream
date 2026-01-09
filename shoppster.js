@@ -10,4 +10,5 @@ const DOM = {
   priceValue: document.querySelector(".price-value"),
   freeShippingCheckbox: document.querySelector(".free-shipping-checkbox"),
   companySelect: document.querySelector(".company-select"),
+  clearAllButton: document.querySelector(".clear-filters-btn"),
 };

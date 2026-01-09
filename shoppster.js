@@ -11,4 +11,5 @@ const DOM = {
   freeShippingCheckbox: document.querySelector(".free-shipping-checkbox"),
   companySelect: document.querySelector(".company-select"),
   clearAllButton: document.querySelector(".clear-filters-btn"),
+  searchInput: document.getElementById("searchInput"),
 };

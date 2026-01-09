@@ -26,4 +26,5 @@ DOM.clearAllButton.addEventListener("click", () => {
   DOM.priceValue.textContent = `$${state.maxPrice.toFixed(2)}`;
 
   resetColors();
+  showProducts();
 });

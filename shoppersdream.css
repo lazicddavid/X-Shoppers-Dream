@@ -327,11 +327,4 @@ body {
   .products-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-
- .products-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}g
-
 }

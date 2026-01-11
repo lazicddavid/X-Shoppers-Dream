@@ -29,7 +29,7 @@ const state = {
 
 const productManager = {
   getFilteredProducts() {
-    let result = [...products];
+    let result = [...progducts];
 
     if (state.color !== "all") {
       result = result.filter((product) => product.colors.includes(state.color));

@@ -280,6 +280,20 @@ DOM.closeFiltersBtn.addEventListener("click", () => {
   DOM.filtersAside.classList.remove("open");
 });
 
+function handleResize() {
+  if (window.innerWidth <= 800) {
+    DOM.filtersAside.classList.add("open");
+  } else {
+    DOM.filtersAside.classList.remove("open");
+  }
+}
+
+// pokreni odmah
+handleResize();
+
+// slušaj resize
+window.addEventListener("resize", handleResize);
+
 DOM.clearAllButton.addEventListener("click", () => {
   state.search = "";
   state.category = "all";

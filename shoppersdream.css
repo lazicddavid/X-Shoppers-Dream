@@ -7,7 +7,7 @@
 
 body {
   margin: 0 auto;
-  align-items: center;
+
   max-width: 1000px;
   background: #fff;
 }
@@ -314,17 +314,23 @@ body {
 .sort select {
   padding: 0.25rem 0.5rem;
 }
-
 @media (max-width: 800px) {
-  .products-layout {
-    flex-direction: column;
-  }
-
   .filters-aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+
     width: 100%;
+    height: 100vh;
+
+    background: #fff;
+    z-index: 1000;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
   }
 
-  .products-grid {
-    grid-template-columns: 1fr 1fr;
+  .filters-aside.open {
+    transform: translateX(0);
   }
 }

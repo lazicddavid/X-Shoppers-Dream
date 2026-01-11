@@ -317,6 +317,7 @@ body {
 @media (max-width: 800px) {
   .filters-aside {
     position: absolute;
+    flex-direction: column;
     top: 0;
     right: 0;
 

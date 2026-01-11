@@ -15,6 +15,9 @@ const DOM = {
   colorsContainer: document.querySelector(".colors-container"),
   sortSelect: document.getElementById("sort"),
   productsCount: document.getElementById("productsCount"),
+
+  openFiltersBtn: document.getElementById("openFiltersBtn"),
+  closeFiltersBtn: document.getElementById("closeFiltersBtn"),
 };
 
 const state = {
@@ -29,7 +32,7 @@ const state = {
 
 const productManager = {
   getFilteredProducts() {
-    let result = [...progducts];
+    let result = [...products];
 
     if (state.color !== "all") {
       result = result.filter((product) => product.colors.includes(state.color));
@@ -267,6 +270,14 @@ DOM.searchInput.addEventListener("input", (e) => {
 DOM.sortSelect.addEventListener("change", (e) => {
   state.sort = e.target.value;
   showProducts();
+});
+
+DOM.openFiltersBtn.addEventListener("click", () => {
+  DOM.filtersAside.classList.add("open");
+});
+
+DOM.closeFiltersBtn.addEventListener("click", () => {
+  DOM.filtersAside.classList.remove("open");
 });
 
 DOM.clearAllButton.addEventListener("click", () => {

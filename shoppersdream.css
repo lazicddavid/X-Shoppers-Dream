@@ -342,4 +342,5 @@ body {
   background-color: cyan;
   font-weight: 600;
   border-radius: 6px;
+  cursor: pointer;
 }

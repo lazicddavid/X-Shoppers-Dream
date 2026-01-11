@@ -273,11 +273,11 @@ DOM.sortSelect.addEventListener("change", (e) => {
 });
 
 DOM.openFiltersBtn.addEventListener("click", () => {
-  DOM.filtersAside.classList.add("open");
+  DOM.filtersAside.classList.toggle("open");
 });
 
 DOM.closeFiltersBtn.addEventListener("click", () => {
-  DOM.filtersAside.classList.remove("open");
+  DOM.filtersAside.classList.toggle("open");
 });
 
 function changeSize() {
@@ -288,10 +288,8 @@ function changeSize() {
   }
 }
 
-// pokreni odmah
 changeSize();
 
-// slušaj resize
 window.addEventListener("resize", changeSize);
 
 DOM.clearAllButton.addEventListener("click", () => {

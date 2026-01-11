@@ -280,7 +280,7 @@ DOM.closeFiltersBtn.addEventListener("click", () => {
   DOM.filtersAside.classList.remove("open");
 });
 
-function handleResize() {
+function changeSize() {
   if (window.innerWidth <= 800) {
     DOM.filtersAside.classList.add("open");
   } else {
@@ -289,10 +289,10 @@ function handleResize() {
 }
 
 // pokreni odmah
-handleResize();
+changeSize();
 
 // slušaj resize
-window.addEventListener("resize", handleResize);
+window.addEventListener("resize", changeSize);
 
 DOM.clearAllButton.addEventListener("click", () => {
   state.search = "";
